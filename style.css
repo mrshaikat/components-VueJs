@@ -1,0 +1,31 @@
+body {
+  background: #e3e3e3;
+}
+
+.panel {
+  width: 960px;
+  margin: 44px auto;
+  border: 1px solid;
+  background: #eeeeee;
+}
+.panelTitle {
+  background: #d1d1d1;
+  font-weight: bold;
+  padding: 9px;
+  color: #505050;
+}
+.panelContent {
+  padding: 22px;
+  background: #fff;
+  min-height: 111px;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  padding: 0 9px;
+}
+
+.close:hover {
+  background: #c85454;
+}

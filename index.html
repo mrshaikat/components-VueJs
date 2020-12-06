@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Vue Js Bangla </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="root">
+        
+           
+
+            <panel title="this is title">
+                
+                <h1>Enter Your name</h1>
+                <input type="text" name="" id="">
+                <button>Submit</button>
+            
+            </panel>
+    </div>
+
+
+    <script type="text/javascript" src="vue.js"></script>
+    <script type="text/javascript">
+
+    Vue.component("panel", {
+        template:`
+        
+        <div class="panel" v-if="show">
+                <div class="panelTitle">
+                   {{ title }} <button class="close" @click="show=false">X</button>
+                </div>
+
+                <div class="panelContent">
+                   <slot></slot>
+                </div>
+            </div>
+        
+        
+        `,
+        props: ["title", "content"],
+        data: function(){
+            return {
+                show: true
+            }
+        }
+    });
+
+    var app = new Vue({
+        el: "#root",
+        data: {
+            
+           
+        }
+    });
+    </script>
+</body>
+</html>
